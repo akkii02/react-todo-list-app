@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-
+import TodoNavbar from './components/TodoNavbar/TodoNavbar';
+import TodoList from './components/TodoList/TodoList';
+import { useState } from 'react';
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoFooter from './components/TodoFooter/TodoFooter';
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleNewTaskClick = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <TodoNavbar onNewTaskClick={handleNewTaskClick} />
+    <TodoForm isOpen={isModalOpen} onClose={closeModal}/>
+    <TodoList/>
+    <TodoFooter/>
+    </>
   );
 }
 

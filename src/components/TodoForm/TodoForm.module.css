@@ -1,0 +1,119 @@
+.todoFormContainer {
+    width: 100%;
+    /* padding: 20px 0; */
+    background-color: white;
+}
+
+.heading {
+    width: 97%;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 5px;
+    padding: 15px;
+    color: gray;
+}
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.formMainContainer{
+    width: 95%;
+    margin: 5px auto;
+    /* padding: 20px 0; */
+
+}
+.formContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.formGroup {
+    width: 48%; 
+    display: flex;
+    flex-direction: column; 
+}
+.formGroupDes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.input, .textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input:focus, .textarea:focus {
+    border-color: #007bff;
+}
+
+.textarea {
+    height: 100px;
+    resize: none; 
+}
+.buttonContainer{
+    width: 100%;
+    background-color: #ecebeb;
+    /* padding: 5px 0; */
+    height: 70px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+.buttonGroup {
+    width: 200px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
+.cancelButton, .saveButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancelButton {
+    background-color: #f44336; 
+    color: white;
+}
+
+.saveButton {
+    background-color: #4caf50; 
+    color: white;
+}
+
+.cancelButton:hover {
+    background-color: #d32f2f;
+}
+
+.saveButton:hover {
+    background-color: #388e3c; 
+}
